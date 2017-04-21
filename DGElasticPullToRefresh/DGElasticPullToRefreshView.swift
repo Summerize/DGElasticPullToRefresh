@@ -46,19 +46,21 @@ enum DGElasticPullToRefreshState: Int {
 // MARK: DGElasticPullToRefreshView
 
 open class DGElasticPullToRefreshView: UIView {
+    private var _pullToRefreshBackgroundColor: UIColor?
+    private var _fillColor: UIColor?
     
     
     // MARK: -
     // MARK: Appearances
-    dynamic var pullToRefreshBackgroundColor: UIColor? {
-        get { return self.pullToRefreshBackgroundColor }
-        set { self.pullToRefreshBackgroundColor = newValue }
+    public dynamic var pullToRefreshBackgroundColor: UIColor? {
+        get { return _pullToRefreshBackgroundColor }
+        set { _pullToRefreshBackgroundColor = newValue }
     }
-
-    dynamic var fillColor: UIColor? {
-        get { return self.fillColor }
-        set { self.fillColor = newValue
-              self.shapeLayer.fillColor = self.fillColor?.cgColor
+    
+    public dynamic var fillColor: UIColor? {
+        get { return _fillColor }
+        set { _fillColor = newValue
+            self.shapeLayer.fillColor = _fillColor?.cgColor
         }
     }
     
