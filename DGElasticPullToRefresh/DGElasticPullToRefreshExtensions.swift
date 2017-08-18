@@ -118,7 +118,7 @@ public extension UIScrollView {
         pullToRefreshView?.removeFromSuperview()
     }
     
-    public func dg_setPullToRefreshBackgroundColor(_ color: UIColor) {
+    open func dg_setPullToRefreshBackgroundColor(_ color: UIColor) {
         pullToRefreshView?.backgroundColor = color
     }
     
